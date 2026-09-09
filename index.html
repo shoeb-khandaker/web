@@ -32,17 +32,18 @@
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
-            padding: 35px 25px;
-            max-width: 520px;
+            padding: 40px 30px;
             width: 100%;
+            max-width: 480px; /* ডেস্কটপে সুন্দর রিডেবল সাইজ রাখবে */
             text-align: center;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
         }
 
         .profile-img-container {
             position: relative;
-            width: 170px;
-            height: 170px;
+            width: 160px;
+            height: 160px;
             margin: 0 auto 20px auto;
             border-radius: 50%;
             overflow: hidden;
@@ -59,7 +60,7 @@
         }
 
         h1 {
-            font-size: 26px;
+            font-size: clamp(22px, 5vw, 28px);
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 6px;
@@ -67,15 +68,15 @@
 
         .title {
             color: #38bdf8;
-            font-size: 15px;
+            font-size: clamp(14px, 3vw, 16px);
             font-weight: 600;
             letter-spacing: 0.5px;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .institution {
             color: #94a3b8;
-            font-size: 13px;
+            font-size: clamp(12px, 2.5vw, 14px);
             margin-bottom: 25px;
             line-height: 1.5;
         }
@@ -83,7 +84,7 @@
         .info-group {
             background: rgba(0, 0, 0, 0.2);
             border-radius: 16px;
-            padding: 15px 20px;
+            padding: 18px 20px;
             margin-bottom: 25px;
             text-align: left;
         }
@@ -92,9 +93,10 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 10px;
-            font-size: 14px;
+            margin-bottom: 12px;
+            font-size: clamp(13px, 2.5vw, 15px);
             color: #cbd5e1;
+            word-break: break-word;
         }
 
         .info-item:last-child {
@@ -106,6 +108,7 @@
             width: 20px;
             text-align: center;
             font-size: 16px;
+            flex-shrink: 0;
         }
 
         .info-item a {
@@ -122,14 +125,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            flex-wrap: nowrap;
+            gap: 12px;
+            flex-wrap: wrap;
             margin-bottom: 25px;
         }
 
         .social-btn {
-            width: 44px;
-            height: 44px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.08);
             display: flex;
@@ -156,6 +159,18 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             padding-top: 15px;
             margin-top: 5px;
+        }
+
+        /* Responsive design for larger screens */
+        @media (min-width: 768px) {
+            .card {
+                max-width: 550px;
+                padding: 45px 35px;
+            }
+            .profile-img-container {
+                width: 180px;
+                height: 180px;
+            }
         }
     </style>
 </head>
